@@ -84,6 +84,7 @@ const PRAHARS = [
     endHour: 22,
     mood: "Noble romantic serenity, devotional joy (Shringar / Shanta)",
     raags: [
+      { id: "bhupali", name: "Raag Bhupali", thaat: "Kalyan" },
       { id: "yaman", name: "Raag Yaman", thaat: "Kalyan" },
       { id: "desh", name: "Raag Desh", thaat: "Khamaj" }
     ],

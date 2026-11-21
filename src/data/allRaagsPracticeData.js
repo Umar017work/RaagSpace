@@ -590,5 +590,62 @@ export const ALL_RAAGS_PRACTICE = {
         ]
       }
     ]
+  },
+  bhupali: {
+    id: "bhupali",
+    name: "Raag Bhupali",
+    hindiName: "राग भूपाली",
+    thaat: "Kalyan",
+    jati: "Audav - Audav (Pentatonic)",
+    vadi: "Ga (Gandhar)",
+    samvadi: "Dha (Dhaivat)",
+    timeDisplay: "First Prahar of Night (7:00 PM – 10:00 PM)",
+    aroha: "Sa Re Ga Pa Dha Ṡ",
+    arohaSimple: "Sa Re Ga Pa Dha Sa’",
+    avroha: "Ṡ Dha Pa Ga Re Sa",
+    avrohaSimple: "Sa’ Dha Pa Ga Re Sa",
+    pakad: "Ga Re Sa, ‘Dha Sa Re Ga, Pa Ga, Dha Pa Ga Re Sa",
+    rasa: "Bhakti (Deep Devotion), Shanti (Tranquility) & Shringar",
+    introduction: "Raag Bhupali (also Bhoopali / Bhoop) is one of the most serene and foundational evening ragas of Hindustani music. Belongs to Kalyan Thaat but employs strictly five shuddha swaras, completely omitting Madhyam (Ma) and Nishad (Ni). Gandhar is its glowing nucleus, sustained with smooth Meend from Pa and Re.",
+    youtubeVideoId: "xNxpbMfCSXc",
+    youtubeTitle: "Raag Bhupali Theory & Sargam Geet Lesson",
+    swaras: [
+      { name: "‘Dha", label: "Mandra Dha", octave: "mandra", isTeevra: false, isKomal: false, isVadi: false, isSamvadi: true, role: "Lower Foundation" },
+      { name: "Sa", label: "Shadja", octave: "madhya", isTeevra: false, isKomal: false, isVadi: false, isSamvadi: false, role: "Pillar Tonic" },
+      { name: "Re", label: "Shuddha Re", octave: "madhya", isTeevra: false, isKomal: false, isVadi: false, isSamvadi: false, role: "Ascent Bridge" },
+      { name: "Ga", label: "Shuddha Ga", octave: "madhya", isTeevra: false, isKomal: false, isVadi: true, isSamvadi: false, role: "Vadi Swara (King)" },
+      { name: "Pa", label: "Pancham", octave: "madhya", isTeevra: false, isKomal: false, isVadi: false, isSamvadi: false, role: "Resonant 5th" },
+      { name: "Dha", label: "Shuddha Dha", octave: "madhya", isTeevra: false, isKomal: false, isVadi: false, isSamvadi: true, role: "Samvadi Swara (Queen)" },
+      { name: "Ṡ", label: "Taar Sa", octave: "taar", isTeevra: false, isKomal: false, isVadi: false, isSamvadi: false, role: "Taar Octave Apex" }
+    ],
+    modules: [
+      {
+        id: "bhupali_sargam_geet",
+        title: "Classical Sargam Geet: Pratham Sur Sadhe (Sthayi)",
+        subtitle: "Madhya Laya Teentaal (16 Matras)",
+        taal: "Teentaal (16 Beats)",
+        bpm: 75,
+        totalDuration: 12.8,
+        description: "Foundational traditional bandish taught across Gharanas. Begins on beat 9 (Khali) and resolves majestically on Sam on Gandhar.",
+        notationData: [
+          { id: "bp9", beat: 9, vibhag: "0", start: 0.0, end: 0.8, swara: "Ga", lyric: "Pra-", hindiLyric: "प्र-", meaning: "First..." },
+          { id: "bp10", beat: 10, vibhag: "0", start: 0.8, end: 1.6, swara: "Re", lyric: "tham", hindiLyric: "थम", meaning: "...tune" },
+          { id: "bp11", beat: 11, vibhag: "0", start: 1.6, end: 2.4, swara: "Sa", lyric: "sur", hindiLyric: "सुर", meaning: "the swaras" },
+          { id: "bp12", beat: 12, vibhag: "0", start: 2.4, end: 3.2, swara: "‘Dha", lyric: "sa-", hindiLyric: "सा-", meaning: "master" },
+          { id: "bp13", beat: 13, vibhag: "3", start: 3.2, end: 4.0, swara: "Sa", lyric: "dhe", hindiLyric: "धे", meaning: "the pitch," },
+          { id: "bp14", beat: 14, vibhag: "3", start: 4.0, end: 4.8, swara: "Re", lyric: "sab", hindiLyric: "सब", meaning: "all" },
+          { id: "bp15", beat: 15, vibhag: "3", start: 4.8, end: 5.6, swara: "Ga", lyric: "gu-", hindiLyric: "गु-", meaning: "virtuous" },
+          { id: "bp16", beat: 16, vibhag: "3", start: 5.6, end: 6.4, swara: "Pa", lyric: "ni", hindiLyric: "नी", meaning: "masters," },
+          { id: "bp1", beat: 1, vibhag: "X", start: 6.4, end: 7.2, swara: "Ga", lyric: "jan", hindiLyric: "जन", meaning: "singers," },
+          { id: "bp2", beat: 2, vibhag: "X", start: 7.2, end: 8.0, swara: "Re", lyric: "gaa-", hindiLyric: "गा-", meaning: "singing" },
+          { id: "bp3", beat: 3, vibhag: "X", start: 8.0, end: 8.8, swara: "Sa", lyric: "ye", hindiLyric: "ये", meaning: "sweetly" },
+          { id: "bp4", beat: 4, vibhag: "X", start: 8.8, end: 9.6, swara: "‘Dha", lyric: "bhoo-", hindiLyric: "भू-", meaning: "Raag" },
+          { id: "bp5", beat: 5, vibhag: "2", start: 9.6, end: 10.4, swara: "Sa", lyric: "pa-", hindiLyric: "पा-", meaning: "Bhoopali," },
+          { id: "bp6", beat: 6, vibhag: "2", start: 10.4, end: 11.2, swara: "Re", lyric: "li", hindiLyric: "ली", meaning: "melody" },
+          { id: "bp7", beat: 7, vibhag: "2", start: 11.2, end: 12.0, swara: "Ga", lyric: "ra-", hindiLyric: "रा-", meaning: "of" },
+          { id: "bp8", beat: 8, vibhag: "2", start: 12.0, end: 12.8, swara: "Re", lyric: "ga", hindiLyric: "ग", meaning: "peace." }
+        ]
+      }
+    ]
   }
 };

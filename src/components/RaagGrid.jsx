@@ -55,7 +55,7 @@ export default function RaagGrid({ raags, onSelectRaag }) {
       <div className="text-center max-w-3xl mx-auto mb-12 sm:mb-16">
         <div className="inline-flex items-center gap-2 text-gold-400 text-xs sm:text-sm tracking-widest uppercase mb-3 font-semibold px-3 py-1 rounded-full bg-gold-500/[0.06] border border-gold-500/20">
           <Music className="w-3.5 h-3.5" />
-          <span>Curated Melodic Scales • 10 Canonical Raags</span>
+          <span>Curated Melodic Scales • 11 Canonical Raags</span>
         </div>
         <h2 className="text-4xl sm:text-5xl lg:text-6xl font-serif text-ivory-50 font-bold mb-4 tracking-tight">
           Choose a Raag

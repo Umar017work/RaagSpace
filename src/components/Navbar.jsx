@@ -29,10 +29,14 @@ export default function Navbar({ onOpenPractice }) {
         </Link>
 
         {/* Desktop Navigation Links */}
-        <nav className="hidden lg:flex items-center gap-7 text-xs font-medium tracking-wide text-ivory-300/80">
+        <nav className="hidden lg:flex items-center gap-6 text-xs font-medium tracking-wide text-ivory-300/80">
           <a href="#raags" className="hover:text-gold-300 transition-colors">
-            Raags (10)
+            Raags (11)
           </a>
+          <Link to="/riyaz" className="text-gold-300 hover:text-gold-200 font-semibold transition-colors flex items-center gap-1">
+            <Sparkles className="w-3 h-3 text-gold-400" />
+            <span>Alankar Riyaz (20)</span>
+          </Link>
           <a href="#prahar-cycle" className="hover:text-gold-300 transition-colors flex items-center gap-1">
             <Clock className="w-3 h-3 text-gold-400/80" />
             <span>Prahar Clock</span>
@@ -49,9 +53,8 @@ export default function Navbar({ onOpenPractice }) {
             <BookOpen className="w-3 h-3 text-gold-400/80" />
             <span>Journal</span>
           </a>
-          <Link to="/raag/yaman" className="text-gold-300 hover:text-gold-200 font-semibold transition-colors flex items-center gap-1">
-            <Sparkles className="w-3 h-3 text-gold-400" />
-            <span>Practice Studio</span>
+          <Link to="/raag/bhupali" className="text-ivory-300 hover:text-gold-200 transition-colors flex items-center gap-1">
+            <span>Raag Bhupali</span>
           </Link>
         </nav>
 
@@ -84,8 +87,22 @@ export default function Navbar({ onOpenPractice }) {
             onClick={() => setMobileMenuOpen(false)}
             className="block text-ivory-200 hover:text-gold-300 py-1"
           >
-            Explore Raags (10)
+            Explore Raags (11)
           </a>
+          <Link
+            to="/riyaz"
+            onClick={() => setMobileMenuOpen(false)}
+            className="block font-semibold text-gold-300 hover:text-gold-200 py-1"
+          >
+            🎵 Alankar Riyaz Studio (20 Alankars & 6 Thaats) →
+          </Link>
+          <Link
+            to="/raag/bhupali"
+            onClick={() => setMobileMenuOpen(false)}
+            className="block font-semibold text-gold-300 hover:text-gold-200 py-1"
+          >
+            ✨ Raag Bhupali Practice Studio →
+          </Link>
           <a
             href="#prahar-cycle"
             onClick={() => setMobileMenuOpen(false)}

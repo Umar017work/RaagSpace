@@ -345,11 +345,44 @@ export const RAAGS_DATA = [
     hasVerificationFlag: true,
     verificationStatus: "Gharana Variation Flagged",
     verificationNotes: "Vadi-Samvadi Discrepancy: 1) The Bhatkhande, Gwalior, and Alladiya lineages designate Madhyam (Ma) as Vadi and Shadja (Sa) as Samvadi. 2) Another respected traditional school designates Dhaivat (Dha) as Vadi and Rishabh (Re) as Samvadi. Both interpretations are canonical. Gandhar and Nishad are strictly varjya."
+  },
+  {
+    id: "bhupali",
+    name: "Raag Bhupali",
+    hindiName: "राग भूपाली",
+    thaat: "Kalyan",
+    jati: "Audav - Audav (Pentatonic)",
+    timeCategory: "night",
+    timeDisplay: "First Prahar of Night (7 PM - 10 PM)",
+    mood: "Devotional, Sublime & Joyful (Bhakti / Shanta / Shringar)",
+    moodTag: "Sublime & Joyful",
+    vadi: "Ga (Gandhar)",
+    samvadi: "Dha (Dhaivat)",
+    aroha: "Sa Re Ga Pa Dha Ṡ",
+    arohaSimple: "Sa Re Ga Pa Dha Sa’",
+    avroha: "Ṡ Dha Pa Ga Re Sa",
+    avrohaSimple: "Sa’ Dha Pa Ga Re Sa",
+    pakad: "Ga Re Sa, ‘Dha Sa Re Ga, Pa Ga, Dha Pa Ga Re Sa",
+    description: "A monumental pentatonic raga of Kalyan Thaat, celebrated as one of the purest foundational ragas in Hindustani music. It employs five shuddha notes and strictly excludes Madhyam (Ma) and Nishad (Ni). Gandhar serves as the luminous vadi note.",
+    swaraNotes: [
+      { name: "‘Dha", freq: 220.00, octave: "mandra", isTeevra: false, isKomal: false, isVadi: false, isSamvadi: false },
+      { name: "Sa", freq: 261.63, octave: "madhya", isTeevra: false, isKomal: false, isVadi: false, isSamvadi: false },
+      { name: "Re", freq: 293.66, octave: "madhya", isTeevra: false, isKomal: false, isVadi: false, isSamvadi: false },
+      { name: "Ga", freq: 329.63, octave: "madhya", isTeevra: false, isKomal: false, isVadi: true, isSamvadi: false },
+      { name: "Pa", freq: 392.00, octave: "madhya", isTeevra: false, isKomal: false, isVadi: false, isSamvadi: false },
+      { name: "Dha", freq: 440.00, octave: "madhya", isTeevra: false, isKomal: false, isVadi: false, isSamvadi: true },
+      { name: "Ṡ", freq: 523.25, octave: "taar", isTeevra: false, isKomal: false, isVadi: false, isSamvadi: false }
+    ],
+    difficulty: "Beginner Friendly",
+    popularSongs: "Jyoti Kalash Chhalke, Sayonara Sayonara, Pankh Hote To Ud Aati Re",
+    hasVerificationFlag: true,
+    verificationStatus: "Canonical Audav Rule Verified",
+    verificationNotes: "Varjya Swaras: Madhyam (Ma) and Nishad (Ni) are strictly forbidden in both Aroha and Avaroha. Vadi is Gandhar (Ga) and Samvadi is Dhaivat (Dha). Must be rendered with graceful Meend from Dha to Pa and Ga to Re, distinguishing it from daytime Deshkar (which leans heavily on Dhaivat)."
   }
 ];
 
 export const TIME_CATEGORIES = [
-  { id: "all", label: "All Raags (10)" },
+  { id: "all", label: "All Raags (11)" },
   { id: "morning", label: "Morning (Pratah)" },
   { id: "afternoon", label: "Afternoon (Madhyahna)" },
   { id: "evening", label: "Evening (Sandhya)" },

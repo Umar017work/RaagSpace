@@ -1,6 +1,6 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { useParams, Link } from 'react-router-dom';
-import { ArrowLeft, Moon, Volume2, Sparkles, Music } from 'lucide-react';
+import { ArrowLeft, Moon, Volume2, Sparkles, Music, Youtube } from 'lucide-react';
 import { ALL_RAAGS_PRACTICE } from '../data/allRaagsPracticeData';
 import { usePitch } from '../context/PitchContext';
 import InteractiveSwaraKeyboard from '../components/yaman/InteractiveSwaraKeyboard';
@@ -8,6 +8,7 @@ import PracticePlayer from '../components/yaman/PracticePlayer';
 import SurMeter from '../components/studio/SurMeter';
 import TablaCompanion from '../components/studio/TablaCompanion';
 import VoiceRecorder from '../components/yaman/VoiceRecorder';
+import MasterclassVideoModal from '../components/studio/MasterclassVideoModal';
 import Footer from '../components/Footer';
 
 export default function RaagPracticeStudioPage() {
@@ -16,6 +17,7 @@ export default function RaagPracticeStudioPage() {
   const raagData = ALL_RAAGS_PRACTICE[raagId] || ALL_RAAGS_PRACTICE["yaman"];
 
   const { selectedRoot, changeRoot, isTanpuraPlaying, toggleDrone, pitchRoots } = usePitch();
+  const [videoModalOpen, setVideoModalOpen] = useState(false);
 
   return (
     <div className="min-h-screen bg-navy-950 text-ivory-100 flex flex-col selection:bg-gold-500/20 selection:text-gold-300">
@@ -95,6 +97,17 @@ export default function RaagPracticeStudioPage() {
                 <Moon className="w-3.5 h-3.5" />
                 <span>{raagData.timeDisplay}</span>
               </span>
+
+              {/* Masterclass Video Trigger if Available */}
+              {raagData.youtubeVideoId && (
+                <button
+                  onClick={() => setVideoModalOpen(true)}
+                  className="sm:ml-auto inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-semibold text-rose-300 bg-rose-500/15 border border-rose-500/35 hover:bg-rose-500/25 transition-all shadow-sm"
+                >
+                  <Youtube className="w-3.5 h-3.5 text-rose-400" />
+                  <span>Watch Guru Masterclass</span>
+                </button>
+              )}
             </div>
 
             {/* Title & Devanagari */}
@@ -200,6 +213,18 @@ export default function RaagPracticeStudioPage() {
         <VoiceRecorder />
 
       </main>
+
+      {/* Embedded Video Masterclass Modal */}
+      {videoModalOpen && raagData.youtubeVideoId && (
+        <MasterclassVideoModal
+          videoData={{
+            videoId: raagData.youtubeVideoId,
+            title: raagData.youtubeTitle || `${raagData.name} Masterclass`,
+            instructor: "Classical Vocal Masterclass"
+          }}
+          onClose={() => setVideoModalOpen(false)}
+        />
+      )}
 
       {/* Footer */}
       <Footer />

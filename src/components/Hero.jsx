@@ -1,5 +1,6 @@
 import React from 'react';
-import { ArrowDown, Play } from 'lucide-react';
+import { ArrowDown, Play, Sparkles } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
 export default function Hero({ onQuickSelectSample }) {
   return (
@@ -29,45 +30,53 @@ export default function Hero({ onQuickSelectSample }) {
         {/* Short Tagline */}
         <p className="max-w-2xl mx-auto text-base sm:text-lg md:text-xl text-ivory-200/90 font-light leading-relaxed mb-8 sm:mb-10 px-2">
           Learn, internalize, and sing the timeless melodies of Indian classical music. 
-          Discover raags through their distinct swaras, daily time cycles, and contemplative moods.
+          Discover raags through their distinct swaras, daily time cycles, and practice foundational alankars across 6 canonical thaats.
         </p>
 
         {/* Responsive CTAs */}
         <div className="flex flex-col sm:flex-row items-center justify-center gap-3.5 sm:gap-4 mb-12 sm:mb-16 w-full max-w-md sm:max-w-none mx-auto">
           <a
             href="#raags"
-            className="w-full sm:w-auto min-h-[44px] inline-flex items-center justify-center gap-2.5 px-8 py-3.5 rounded-full font-medium text-xs sm:text-sm tracking-wide bg-gradient-to-r from-gold-500 to-gold-400 text-navy-950 hover:brightness-110 shadow-gold-glow hover:shadow-gold-glow-lg transition-all duration-300 transform hover:-translate-y-0.5"
+            className="w-full sm:w-auto min-h-[44px] inline-flex items-center justify-center gap-2.5 px-7 py-3.5 rounded-full font-medium text-xs sm:text-sm tracking-wide bg-gradient-to-r from-gold-500 to-gold-400 text-navy-950 hover:brightness-110 shadow-gold-glow hover:shadow-gold-glow-lg transition-all duration-300 transform hover:-translate-y-0.5"
           >
-            <span>Choose a Raag</span>
+            <span>Choose a Raag (11)</span>
             <ArrowDown className="w-4 h-4 text-navy-950" />
           </a>
 
+          <Link
+            to="/riyaz"
+            className="w-full sm:w-auto min-h-[44px] inline-flex items-center justify-center gap-2.5 px-7 py-3.5 rounded-full font-medium text-xs sm:text-sm tracking-wide text-gold-300 border border-gold-500/40 hover:border-gold-400 bg-gold-500/10 hover:bg-gold-500/20 transition-all duration-300 shadow-gold-glow"
+          >
+            <Sparkles className="w-4 h-4 text-gold-400" />
+            <span>Alankar Riyaz (20 Paltas)</span>
+          </Link>
+
           <button
             onClick={onQuickSelectSample}
-            className="w-full sm:w-auto min-h-[44px] inline-flex items-center justify-center gap-2.5 px-7 py-3.5 rounded-full font-medium text-xs sm:text-sm tracking-wide text-ivory-200 border border-gold-500/30 hover:border-gold-400/60 bg-navy-900/60 hover:bg-navy-850/80 transition-all duration-300"
+            className="w-full sm:w-auto min-h-[44px] inline-flex items-center justify-center gap-2.5 px-6 py-3.5 rounded-full font-medium text-xs sm:text-sm tracking-wide text-ivory-200 border border-white/[0.1] hover:border-gold-400/60 bg-navy-900/60 hover:bg-navy-850/80 transition-all duration-300"
           >
             <Play className="w-4 h-4 text-gold-400 fill-gold-400/20" />
-            <span>Hear Sample (Raag Yaman)</span>
+            <span>Hear Sample (Yaman)</span>
           </button>
         </div>
 
         {/* Minimal metadata strip (2 cols mobile, 4 cols desktop) */}
         <div className="pt-6 sm:pt-8 border-t border-white/[0.06] grid grid-cols-2 sm:grid-cols-4 gap-4 sm:gap-6 max-w-3xl mx-auto text-center">
           <div className="p-2 sm:p-0">
-            <div className="font-serif text-2xl sm:text-3xl text-ivory-100 font-semibold">10 Raags</div>
+            <div className="font-serif text-2xl sm:text-3xl text-ivory-100 font-semibold">11 Raags</div>
             <div className="text-[10px] sm:text-xs text-ivory-400/70 tracking-wider uppercase mt-1">Foundational Scales</div>
+          </div>
+          <div className="p-2 sm:p-0">
+            <div className="font-serif text-2xl sm:text-3xl text-ivory-100 font-semibold">20 Alankars</div>
+            <div className="text-[10px] sm:text-xs text-ivory-400/70 tracking-wider uppercase mt-1">6-Thaat Palta Gym</div>
           </div>
           <div className="p-2 sm:p-0">
             <div className="font-serif text-2xl sm:text-3xl text-ivory-100 font-semibold">8 Prahars</div>
             <div className="text-[10px] sm:text-xs text-ivory-400/70 tracking-wider uppercase mt-1">Time Alignment</div>
           </div>
           <div className="p-2 sm:p-0">
-            <div className="font-serif text-2xl sm:text-3xl text-ivory-100 font-semibold">Aroha & Avroha</div>
-            <div className="text-[10px] sm:text-xs text-ivory-400/70 tracking-wider uppercase mt-1">Guided Sargam</div>
-          </div>
-          <div className="p-2 sm:p-0">
-            <div className="font-serif text-2xl sm:text-3xl text-ivory-100 font-semibold">Microtonal Swaras</div>
-            <div className="text-[10px] sm:text-xs text-ivory-400/70 tracking-wider uppercase mt-1">Acoustic Pitch</div>
+            <div className="font-serif text-2xl sm:text-3xl text-ivory-100 font-semibold">Sur Meter</div>
+            <div className="text-[10px] sm:text-xs text-ivory-400/70 tracking-wider uppercase mt-1">Live Vocal Pitch</div>
           </div>
         </div>
 
