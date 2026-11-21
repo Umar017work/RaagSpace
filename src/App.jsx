@@ -2,7 +2,7 @@ import React from 'react';
 import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom';
 import { PitchProvider } from './context/PitchContext';
 import HomePage from './pages/HomePage';
-import YamanPracticePage from './pages/YamanPracticePage';
+import RaagPracticeStudioPage from './pages/RaagPracticeStudioPage';
 
 export default function App() {
   return (
@@ -10,7 +10,8 @@ export default function App() {
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<HomePage />} />
-          <Route path="/raag/yaman" element={<YamanPracticePage />} />
+          {/* Dynamic studio route for all 10 raags */}
+          <Route path="/raag/:id" element={<RaagPracticeStudioPage />} />
           {/* Fallback to homepage */}
           <Route path="*" element={<Navigate to="/" replace />} />
         </Routes>

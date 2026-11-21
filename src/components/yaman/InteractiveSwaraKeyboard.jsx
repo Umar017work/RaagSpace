@@ -4,7 +4,7 @@ import { usePitch } from '../../context/PitchContext';
 import { YAMAN_SWARAS } from '../../data/yamanPracticeData';
 import { tonePlayer } from '../../utils/audioSynth';
 
-export default function InteractiveSwaraKeyboard() {
+export default function InteractiveSwaraKeyboard({ swaras = YAMAN_SWARAS, raagName = "Raag Yaman" }) {
   const { selectedRoot, getSwaraFreq } = usePitch();
   const [activeSwaraName, setActiveSwaraName] = useState(null);
 
@@ -27,7 +27,7 @@ export default function InteractiveSwaraKeyboard() {
             <span>Interactive Sargam Keypad</span>
           </div>
           <h3 className="text-2xl sm:text-3xl font-serif font-bold text-ivory-50">
-            Swaras of Raag Yaman
+            Swaras of {raagName}
           </h3>
           <p className="text-xs sm:text-sm text-ivory-300/80 mt-1 font-light">
             Pitch is dynamically calibrated to your root: <strong className="text-gold-300 font-semibold">{selectedRoot.label}</strong>. Tap any swara to calibrate your vocal pitch.
@@ -38,22 +38,22 @@ export default function InteractiveSwaraKeyboard() {
         <div className="flex flex-wrap items-center gap-3 text-[11px] text-ivory-400/80">
           <div className="flex items-center gap-1">
             <span className="w-2.5 h-2.5 rounded-full bg-gold-400" />
-            <span>Vadi (Ga)</span>
+            <span>Vadi Swara</span>
           </div>
           <div className="flex items-center gap-1">
             <span className="w-2.5 h-2.5 rounded-full border border-gold-400 bg-gold-400/20" />
-            <span>Samvadi (Ni)</span>
+            <span>Samvadi</span>
           </div>
           <div className="flex items-center gap-1">
             <span className="w-2.5 h-2.5 rounded-full bg-amber-500/60" />
-            <span>Teevra Ma (Ḿ)</span>
+            <span>Altered (Komal/Teevra)</span>
           </div>
         </div>
       </div>
 
       {/* Swara Keypad Grid (Touch targets >= 56px height) */}
       <div className="grid grid-cols-2 sm:grid-cols-4 lg:grid-cols-8 gap-3">
-        {YAMAN_SWARAS.map((swara) => {
+        {swaras.map((swara) => {
           const freq = Math.round(getSwaraFreq(swara.name));
           const isActive = activeSwaraName === swara.name;
           const isVadi = swara.isVadi;

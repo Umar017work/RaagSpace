@@ -116,35 +116,33 @@ export default function RaagDetailModal({ raag, onClose }) {
         {/* Modal Body (Scrollable with custom scrollbar) */}
         <div className="p-5 sm:p-7 space-y-6 overflow-y-auto">
           
-          {/* Dedicated Practice Studio Banner for Yaman */}
-          {raag.id === 'yaman' && (
-            <div className="p-4 sm:p-5 rounded-2xl bg-gradient-to-r from-gold-500/15 via-gold-500/10 to-navy-950 border border-gold-500/40 flex flex-col sm:flex-row sm:items-center justify-between gap-3 shadow-gold-glow">
-              <div>
-                <div className="flex items-center gap-1.5 text-gold-300 font-semibold text-xs tracking-wider uppercase">
-                  <Sparkles className="w-3.5 h-3.5 text-gold-400" />
-                  <span>Dedicated Studio Available</span>
-                </div>
-                <div className="text-sm font-serif text-ivory-50 font-bold mt-0.5">
-                  Raag Yaman Full Practice & Learning Studio
-                </div>
-                <div className="text-xs text-ivory-300/80 font-light mt-0.5">
-                  Synchronized Bandish (Lyrics + Sargam), Speed Controls & Voice Recorder.
-                </div>
+          {/* Dedicated Practice Studio Banner for Raags */}
+          <div className="p-4 sm:p-5 rounded-2xl bg-gradient-to-r from-gold-500/15 via-gold-500/10 to-navy-950 border border-gold-500/40 flex flex-col sm:flex-row sm:items-center justify-between gap-3 shadow-gold-glow">
+            <div>
+              <div className="flex items-center gap-1.5 text-gold-300 font-semibold text-xs tracking-wider uppercase">
+                <Sparkles className="w-3.5 h-3.5 text-gold-400" />
+                <span>Dedicated Practice Studio</span>
               </div>
-
-              <Link
-                to="/raag/yaman"
-                onClick={() => {
-                  tonePlayer.stopSequence();
-                  onClose();
-                }}
-                className="inline-flex items-center justify-center gap-2 px-5 py-2.5 rounded-full text-xs font-semibold bg-gold-500 text-navy-950 hover:brightness-110 shadow-gold-glow transition-all flex-shrink-0"
-              >
-                <span>Open Studio</span>
-                <ArrowRight className="w-3.5 h-3.5 text-navy-950" />
-              </Link>
+              <div className="text-sm font-serif text-ivory-50 font-bold mt-0.5">
+                {raag.name} Full Practice & Learning Studio
+              </div>
+              <div className="text-xs text-ivory-300/80 font-light mt-0.5">
+                Synchronized Bandish, Sur Meter (Tuner), Tabla Theka & Voice Recorder.
+              </div>
             </div>
-          )}
+
+            <Link
+              to={`/raag/${raag.id}`}
+              onClick={() => {
+                tonePlayer.stopSequence();
+                onClose();
+              }}
+              className="inline-flex items-center justify-center gap-2 px-5 py-2.5 rounded-full text-xs font-semibold bg-gold-500 text-navy-950 hover:brightness-110 shadow-gold-glow transition-all flex-shrink-0"
+            >
+              <span>Open Studio</span>
+              <ArrowRight className="w-3.5 h-3.5 text-navy-950" />
+            </Link>
+          </div>
 
           {/* Interactive Swara Pitch Keyboard */}
           <div className="p-4 sm:p-5 rounded-2xl bg-navy-950/90 border border-gold-500/25 shadow-inner">

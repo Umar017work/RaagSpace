@@ -4,11 +4,11 @@ import { usePitch } from '../../context/PitchContext';
 import { YAMAN_PRACTICE_MODULES } from '../../data/yamanPracticeData';
 import { MelodyPracticeEngine } from '../../utils/audioSynth';
 
-export default function PracticePlayer() {
+export default function PracticePlayer({ practiceModules = YAMAN_PRACTICE_MODULES }) {
   const { getSwaraFreq, selectedRoot } = usePitch();
   
   const [selectedModuleIndex, setSelectedModuleIndex] = useState(0);
-  const currentModule = YAMAN_PRACTICE_MODULES[selectedModuleIndex];
+  const currentModule = practiceModules[selectedModuleIndex] || practiceModules[0];
 
   // Display mode: 'both' | 'sargam' | 'lyrics'
   const [displayMode, setDisplayMode] = useState('both');
@@ -124,7 +124,7 @@ export default function PracticePlayer() {
 
         {/* Practice Module Selector Tabs */}
         <div className="flex items-center gap-2 p-1.5 rounded-2xl bg-navy-950/80 border border-white/[0.06] overflow-x-auto no-scrollbar">
-          {YAMAN_PRACTICE_MODULES.map((mod, idx) => (
+          {practiceModules.map((mod, idx) => (
             <button
               key={mod.id}
               onClick={() => {
@@ -137,7 +137,7 @@ export default function PracticePlayer() {
                   : 'text-ivory-300/70 hover:text-ivory-100 hover:bg-white/[0.03]'
               }`}
             >
-              {idx === 0 ? 'Bandish (Eri Aali)' : 'Pakad & Chalan'}
+              {mod.title.includes(':') ? mod.title.split(':')[1].trim() : mod.title}
             </button>
           ))}
         </div>

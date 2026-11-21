@@ -270,19 +270,17 @@ export default function RaagGrid({ raags, onSelectRaag }) {
                   )}
                 </button>
 
-                {/* View Details Link & Yaman Studio Link */}
+                {/* View Details Link & Studio Link */}
                 <div className="flex items-center gap-2">
-                  {raag.id === 'yaman' && (
-                    <Link
-                      to="/raag/yaman"
-                      onClick={(e) => e.stopPropagation()}
-                      className="inline-flex items-center gap-1 text-[11px] font-semibold text-gold-300 hover:text-gold-200 px-2.5 py-1.5 rounded-lg bg-gold-500/15 border border-gold-500/35 hover:bg-gold-500/25 transition-all shadow-sm"
-                      title="Open dedicated practice page with Bandish & Voice Recorder"
-                    >
-                      <span>Studio</span>
-                      <ChevronRight className="w-3 h-3 text-gold-400" />
-                    </Link>
-                  )}
+                  <Link
+                    to={`/raag/${raag.id}`}
+                    onClick={(e) => e.stopPropagation()}
+                    className="inline-flex items-center gap-1 text-[11px] font-semibold text-gold-300 hover:text-gold-200 px-2.5 py-1.5 rounded-lg bg-gold-500/15 border border-gold-500/35 hover:bg-gold-500/25 transition-all shadow-sm"
+                    title={`Open ${raag.name} practice studio with Bandish, Sur Meter & Tabla`}
+                  >
+                    <span>Studio</span>
+                    <ChevronRight className="w-3 h-3 text-gold-400" />
+                  </Link>
 
                   <div className="inline-flex items-center gap-1 text-xs font-medium text-ivory-300/70 group-hover:text-gold-300 transition-colors">
                     <span>Details</span>
