@@ -1,51 +1,53 @@
 import React from 'react';
-import { ArrowDown, Play, Sparkles } from 'lucide-react';
+import { ArrowDown, Play, Sparkles, Music, ShieldCheck, Disc } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
 export default function Hero({ onQuickSelectSample }) {
   return (
     <section className="relative overflow-hidden pt-16 pb-24 md:pt-28 md:pb-36">
-      {/* Subtle Ambient Background Lighting */}
-      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[90vw] max-w-[700px] h-[350px] bg-gold-500/[0.04] blur-[120px] rounded-full pointer-events-none" />
-      <div className="absolute top-24 left-1/4 w-[80vw] max-w-[450px] h-[300px] bg-indigo-600/[0.06] blur-[140px] rounded-full pointer-events-none" />
+      
+      {/* Ambient Radial Golden Shimmer */}
+      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[95vw] max-w-[850px] h-[450px] bg-gold-500/[0.06] blur-[140px] rounded-full pointer-events-none" />
+      <div className="absolute top-28 left-1/4 w-[80vw] max-w-[500px] h-[350px] bg-indigo-600/[0.05] blur-[160px] rounded-full pointer-events-none" />
 
-      {/* Subtle fine concentric circles representing Nada / Resonance */}
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[700px] sm:w-[900px] h-[700px] sm:h-[900px] border border-gold-500/[0.04] rounded-full pointer-events-none" />
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[1100px] sm:w-[1300px] h-[1100px] sm:h-[1300px] border border-white/[0.02] rounded-full pointer-events-none" />
+      {/* Subtle fine concentric circles representing Nada Brahma / Sound Vibrations */}
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[650px] sm:w-[850px] h-[650px] sm:h-[850px] border border-gold-500/[0.05] rounded-full pointer-events-none" />
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[950px] sm:w-[1250px] h-[950px] sm:h-[1250px] border border-white/[0.02] rounded-full pointer-events-none" />
 
-      <div className="relative max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <div className="relative max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-6">
+        
         {/* Subtle pill badge */}
-        <div className="inline-flex items-center gap-2 px-3.5 sm:px-4 py-1.5 rounded-full border border-gold-500/30 bg-navy-900/80 backdrop-blur-sm mb-6 sm:mb-8 shadow-gold-glow">
+        <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-gold-500/35 bg-navy-900/90 backdrop-blur-md shadow-gold-glow animate-fade-in">
           <span className="w-1.5 h-1.5 rounded-full bg-gold-400 animate-pulse" />
-          <span className="text-[11px] sm:text-xs uppercase tracking-[0.2em] text-ivory-200 font-medium">
-            Hindustani Classical Singing Companion
+          <span className="text-[11px] sm:text-xs uppercase tracking-[0.22em] text-ivory-200 font-semibold font-sans">
+            Hindustani Classical Singing Companion • नाद ब्रह्म
           </span>
         </div>
 
-        {/* Main Title */}
-        <h1 className="text-5xl sm:text-7xl md:text-8xl font-serif font-bold tracking-tight text-ivory-50 mb-5 sm:mb-6 leading-tight">
+        {/* Main Title with Gold Foil Gradient */}
+        <h1 className="text-5xl sm:text-7xl md:text-8xl lg:text-9xl font-serif font-bold tracking-tight text-ivory-50 leading-[1.05]">
           Raag<span className="text-gold-gradient font-normal italic">Space</span>
         </h1>
 
-        {/* Short Tagline */}
-        <p className="max-w-2xl mx-auto text-base sm:text-lg md:text-xl text-ivory-200/90 font-light leading-relaxed mb-8 sm:mb-10 px-2">
-          Learn, internalize, and sing the timeless melodies of Indian classical music. 
-          Discover raags through their distinct swaras, daily time cycles, and practice foundational alankars across 6 canonical thaats.
+        {/* Tagline */}
+        <p className="max-w-2xl mx-auto text-base sm:text-lg md:text-xl text-ivory-200/90 font-light leading-relaxed px-2">
+          Master the divine architecture of Indian classical music. 
+          Discover raags aligned with nature's 8 prahars, practice 20 canonical alankars across 6 thaats, and calibrate your voice with real-time tanpura, tabla, and pitch detection.
         </p>
 
         {/* Responsive CTAs */}
-        <div className="flex flex-col sm:flex-row items-center justify-center gap-3.5 sm:gap-4 mb-12 sm:mb-16 w-full max-w-md sm:max-w-none mx-auto">
+        <div className="flex flex-col sm:flex-row items-center justify-center gap-3.5 sm:gap-4 pt-4 pb-2 w-full max-w-md sm:max-w-none mx-auto">
           <a
             href="#raags"
-            className="w-full sm:w-auto min-h-[44px] inline-flex items-center justify-center gap-2.5 px-7 py-3.5 rounded-full font-medium text-xs sm:text-sm tracking-wide bg-gradient-to-r from-gold-500 to-gold-400 text-navy-950 hover:brightness-110 shadow-gold-glow hover:shadow-gold-glow-lg transition-all duration-300 transform hover:-translate-y-0.5"
+            className="w-full sm:w-auto min-h-[48px] inline-flex items-center justify-center gap-2.5 px-8 py-3.5 rounded-full font-bold text-xs sm:text-sm tracking-wide bg-gradient-to-r from-gold-500 via-gold-400 to-gold-500 text-navy-950 hover:brightness-110 shadow-gold-glow hover:shadow-gold-glow-lg transition-all duration-300 transform hover:-translate-y-0.5"
           >
-            <span>Choose a Raag (11)</span>
+            <span>Explore 11 Raags</span>
             <ArrowDown className="w-4 h-4 text-navy-950" />
           </a>
 
           <Link
             to="/riyaz"
-            className="w-full sm:w-auto min-h-[44px] inline-flex items-center justify-center gap-2.5 px-7 py-3.5 rounded-full font-medium text-xs sm:text-sm tracking-wide text-gold-300 border border-gold-500/40 hover:border-gold-400 bg-gold-500/10 hover:bg-gold-500/20 transition-all duration-300 shadow-gold-glow"
+            className="w-full sm:w-auto min-h-[48px] inline-flex items-center justify-center gap-2.5 px-7 py-3.5 rounded-full font-semibold text-xs sm:text-sm tracking-wide text-gold-200 border border-gold-500/50 hover:border-gold-400 bg-gold-500/15 hover:bg-gold-500/25 transition-all duration-300 shadow-gold-glow"
           >
             <Sparkles className="w-4 h-4 text-gold-400" />
             <span>Alankar Riyaz (20 Paltas)</span>
@@ -53,31 +55,44 @@ export default function Hero({ onQuickSelectSample }) {
 
           <button
             onClick={onQuickSelectSample}
-            className="w-full sm:w-auto min-h-[44px] inline-flex items-center justify-center gap-2.5 px-6 py-3.5 rounded-full font-medium text-xs sm:text-sm tracking-wide text-ivory-200 border border-white/[0.1] hover:border-gold-400/60 bg-navy-900/60 hover:bg-navy-850/80 transition-all duration-300"
+            className="w-full sm:w-auto min-h-[48px] inline-flex items-center justify-center gap-2.5 px-6 py-3.5 rounded-full font-medium text-xs sm:text-sm tracking-wide text-ivory-200 border border-white/[0.1] hover:border-gold-400/60 bg-navy-900/80 hover:bg-navy-850 transition-all duration-300"
           >
             <Play className="w-4 h-4 text-gold-400 fill-gold-400/20" />
-            <span>Hear Sample (Yaman)</span>
+            <span>Sample (Raag Yaman)</span>
           </button>
         </div>
 
-        {/* Minimal metadata strip (2 cols mobile, 4 cols desktop) */}
-        <div className="pt-6 sm:pt-8 border-t border-white/[0.06] grid grid-cols-2 sm:grid-cols-4 gap-4 sm:gap-6 max-w-3xl mx-auto text-center">
-          <div className="p-2 sm:p-0">
-            <div className="font-serif text-2xl sm:text-3xl text-ivory-100 font-semibold">11 Raags</div>
-            <div className="text-[10px] sm:text-xs text-ivory-400/70 tracking-wider uppercase mt-1">Foundational Scales</div>
+        {/* Luxury Stats / Value Strip (4 cols) */}
+        <div className="pt-10 sm:pt-12 border-t border-white/[0.08] grid grid-cols-2 sm:grid-cols-4 gap-4 sm:gap-6 max-w-4xl mx-auto text-center">
+          
+          <div className="p-4 rounded-2xl bg-navy-900/50 border border-white/[0.05] hover:border-gold-500/30 transition-all">
+            <div className="font-serif text-3xl sm:text-4xl text-ivory-50 font-bold">11 Raags</div>
+            <div className="text-[10px] sm:text-xs text-gold-400/90 tracking-widest uppercase mt-1 font-semibold">
+              Canonical Scales
+            </div>
           </div>
-          <div className="p-2 sm:p-0">
-            <div className="font-serif text-2xl sm:text-3xl text-ivory-100 font-semibold">20 Alankars</div>
-            <div className="text-[10px] sm:text-xs text-ivory-400/70 tracking-wider uppercase mt-1">6-Thaat Palta Gym</div>
+
+          <div className="p-4 rounded-2xl bg-navy-900/50 border border-white/[0.05] hover:border-gold-500/30 transition-all">
+            <div className="font-serif text-3xl sm:text-4xl text-ivory-50 font-bold">20 Alankars</div>
+            <div className="text-[10px] sm:text-xs text-gold-400/90 tracking-widest uppercase mt-1 font-semibold">
+              6-Thaat Palta Gym
+            </div>
           </div>
-          <div className="p-2 sm:p-0">
-            <div className="font-serif text-2xl sm:text-3xl text-ivory-100 font-semibold">8 Prahars</div>
-            <div className="text-[10px] sm:text-xs text-ivory-400/70 tracking-wider uppercase mt-1">Time Alignment</div>
+
+          <div className="p-4 rounded-2xl bg-navy-900/50 border border-white/[0.05] hover:border-gold-500/30 transition-all">
+            <div className="font-serif text-3xl sm:text-4xl text-ivory-50 font-bold">8 Prahars</div>
+            <div className="text-[10px] sm:text-xs text-gold-400/90 tracking-widest uppercase mt-1 font-semibold">
+              Solar Time Clock
+            </div>
           </div>
-          <div className="p-2 sm:p-0">
-            <div className="font-serif text-2xl sm:text-3xl text-ivory-100 font-semibold">Sur Meter</div>
-            <div className="text-[10px] sm:text-xs text-ivory-400/70 tracking-wider uppercase mt-1">Live Vocal Pitch</div>
+
+          <div className="p-4 rounded-2xl bg-navy-900/50 border border-white/[0.05] hover:border-gold-500/30 transition-all">
+            <div className="font-serif text-3xl sm:text-4xl text-gold-300 font-bold">Sur Meter</div>
+            <div className="text-[10px] sm:text-xs text-gold-400/90 tracking-widest uppercase mt-1 font-semibold">
+              Live Pitch Detection
+            </div>
           </div>
+
         </div>
 
       </div>
